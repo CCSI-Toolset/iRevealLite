@@ -20,12 +20,12 @@ TBD
 * Poorva Sharma
 * Khushbu Agarwal
 
-See also the list of [contributors](https://github.com/CCSI-Toolset/SimSinter/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/CCSI-Toolset/iREVEAL/contributors) who participated in this project.
 
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, 
-see the [tags on this repository](https://github.com/CCSI-Toolset/MEA_dm/tags). 
+see the [tags on this repository](https://github.com/CCSI-Toolset/iREVEAL/tags). 
 
 ## License
 
