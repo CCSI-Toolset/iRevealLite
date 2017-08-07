@@ -12,8 +12,30 @@ Automate tool to create reduced order model and export solution for CFD models
 * A practice of rebasing with the main repo should be used rather that merge commmits.
 
 ## Getting Started
+This software has been compiled and tested on Windows 7 professional
 
-TBD
+### Pre-requisites
+Your environment must have the following tools installed.
+The build has be tested with the following versions. Use other
+versions at your own risk.
+
++ Ant 1.9.6
++ Git Bash for windows
++ Java 1.8
++ 7z
+
+### Build and Package
+After installing the tools above run the Git Bash program.
+Executing the commands below tocompile the source and 
+and package the output
+
+
+```
+git clone https://github.com/CCSI-Toolset/iREVEAL.git
+cd iREVEAL
+start make.bat
+
+```
 
 ## Authors
 
