@@ -1,9 +1,42 @@
 //Util.cpp
 #include <math.h>
-#include "CCSI.h"
 #include "Util.h"
 #include "LHS.h"
 #include "YROM.h"
+#ifdef WIN32
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif
+
+string GetExecutableDirectory()
+{
+	std::string path = "";
+#ifdef WIN32
+	char szAppPath[MAX_PATH];
+	GetModuleFileNameA(0, szAppPath, MAX_PATH);
+	path = szAppPath;
+	string::size_type t = path.find_last_of("\\");
+	path = path.substr(0,t+1);
+#else
+	pid_t pid = getpid();
+	char buf[10];
+	sprintf(buf,"%d",pid);
+	std::string _link = "/proc/";
+	_link.append( buf );
+	_link.append( "/exe");
+	char proc[512];
+	int ch = readlink(_link.c_str(),proc,512);
+	if (ch != -1)
+	{ 
+		proc[ch] = 0; 
+		path = proc; 
+	}
+	string::size_type t = path.find_last_of("/");
+	path = path.substr(0,t+1);
+#endif
+	return path;
+}
 
 void PrintCommandUsage()
 {
@@ -14,8 +47,11 @@ void PrintCommandUsage()
 
 int ProcessJsonAndSampleInputSpace(char* filename)
 {
-	string str = "java -cp iReveal.jar DataModel.UnitOperation -a ";
+	string str = "java -cp ";
+	str += GetExecutableDirectory();
+	str += "iReveal.jar DataModel.UnitOperation -a ";
 	str += filename;
+	printf("%s\n",str.c_str());
 	//call java code to create iReveal.io and 1st part of acmf file
 	system(str.c_str());
 	FILE* pfin = fopen("iReveal.io","r");
