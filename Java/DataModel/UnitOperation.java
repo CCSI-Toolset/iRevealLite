@@ -2217,6 +2217,12 @@ public class UnitOperation extends Alias implements Serializable
 							out.println("      for j in " + connectionName + ".Componentlist - [\"" + solidPhaseList.get(sm.getPhaseIndex()) + "\"] DO");
 							out.println("        " + connectionName + ".Zm(j) = 0;");
 							out.println("      endfor");
+							//initialize NC arrays, revised on 2/22/2018
+							out.println("      " + connectionName + ".PROXANAL:0.0;");
+							out.println("      " + connectionName + ".ULTANAL:0.0;");
+							out.println("      " + connectionName + ".SULFANAL:0.0;");
+							out.println("      " + connectionName + ".GENANAL:0.0;");
+							//end of revision on 2/22/2018
 							out.println("      " + connectionName + ".GENANAL = " + solidFeedPortNames[k] + ".connection(" + solidFeedPortNames[k] + "Name+i).GENANAL;");
 							out.println("    endif");
 						}

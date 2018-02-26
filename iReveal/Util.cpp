@@ -47,9 +47,9 @@ void PrintCommandUsage()
 
 int ProcessJsonAndSampleInputSpace(char* filename)
 {
-	string str = "java -cp ";
+	string str = "java -cp \"";
 	str += GetExecutableDirectory();
-	str += "iReveal.jar DataModel.UnitOperation -a ";
+	str += "iReveal.jar\" DataModel.UnitOperation -a ";
 	str += filename;
 	printf("%s\n",str.c_str());
 	//call java code to create iReveal.io and 1st part of acmf file
