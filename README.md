@@ -19,7 +19,7 @@ See installation manual in the [documentation](docs) subdirectory.
 
 
 ```
-git clone https://github.com/CCSI-Toolset/iREVEAL.git
+git clone https://github.com/CCSI-Toolset/iRevealLite.git
 ```
 
 ## Authors
