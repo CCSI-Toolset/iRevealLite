@@ -1,38 +1,30 @@
-# iREVEAL
-Automate tool to create reduced order model and export solution for CFD models
+# iRevealLite
+Automate tool to create reduced order model from high-fidelity model
 
 ## Getting Started
 See installaton and user guide documents in the [documentation](docs) subdirectory.
 
-This software has been compiled and tested on Windows 7 professional
+This software has been compiled and tested on Windows 7 professional and Linux
 
 ### Pre-requisites
 Your environment must have the following tools installed.
 The build has be tested with the following versions. Use other
 versions at your own risk.
 
-+ Ant 1.9.6
 + Git Bash for windows
 + Java 1.8
-+ 7z
 
 ### Build and Package
-After installing the tools above run the Git Bash program.
-Executing the commands below tocompile the source and 
-and package the output
+See installation manual in the [documentation](docs) subdirectory.
 
 
 ```
 git clone https://github.com/CCSI-Toolset/iREVEAL.git
-cd iREVEAL
-start make.bat
-
 ```
 
 ## Authors
 
-* Poorva Sharma
-* Khushbu Agarwal
+* Jinliang Ma
 
 See also the list of [contributors](../../contributors) who participated in this project.
 
