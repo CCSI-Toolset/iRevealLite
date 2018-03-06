@@ -4050,13 +4050,13 @@ public class UnitOperation extends Alias implements Serializable
 		if (argu[0].equals("-a"))
 		{
 			uo.exportACMRom();
-			uo.exportFileForSampling("iReveal.io");
+			uo.exportFileForSampling("iRevealLite.io");
 			return;
 		}
 		if (argu[0].equals("-c"))
 		{
 			uo.exportCapeOpenRom();
-			uo.exportFileForSampling("iReveal.io");
+			uo.exportFileForSampling("iRevealLite.io");
 			return;
 		}
 		//assume any other option is "-b" option
