@@ -1,7 +1,7 @@
 # iRevealLite
 Automate tool to create reduced order model from high-fidelity model
 
-Note: This product is also part of the [ProcessModels Bundle](../../../ProcessModels_bundle)
+Note: This product is also part of the [FOQUS Bundle](../../../FOQUS_bundle)
 
 ## Getting Started
 See installaton and user guide documents in the [documentation](docs) subdirectory.
